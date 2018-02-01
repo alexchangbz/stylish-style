@@ -4,6 +4,20 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
   
+  def edit
+    @product = Product.find(params[:id])
+  end
+  
+  def update
+    @product = Product.find(params[:id])
+    if @product.update(product_params)
+      flash[:notice] = "Product's informations were successfully updated"
+      redirect_to product_path(@product)
+    else
+      render 'edit'
+    end
+  end
+  
   def create
     @product = Product.new(product_params)
     if @product.save
