@@ -1,5 +1,14 @@
 <h1>Add new products</h1>
 
+<% if @product.errors.any? %>
+<h2>The following errors need to be fixed in order to add a new products:</h2>
+  <ul>
+    <% @product.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @product do |f| %>
   <p>
     <%= f.label :name %></br>
