@@ -1,6 +1,16 @@
 <h1>Stylish Style Shop</h1>
 
-<% @products.each do |product| %>
-  <%= product.name %>
-  <%= product.price %>
-<% end %>
+  <div class="row text-center text-lg-left">
+      <% @products.each do |product| %>
+      <div class="col-md-3">
+          <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+          </a>
+          <h4><%= link_to "#{product.name}", product_path(product) %></h4>
+          <p class="lead">RM <%= product.price %></p>
+          <p><%= link_to "Add to Cart", "#", class: "btn btn-md btn-primary" %></p>
+      </div>
+      <% end %>
+  </div>
+
+
