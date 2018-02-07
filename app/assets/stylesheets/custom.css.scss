@@ -82,6 +82,18 @@ $navbar-default-bg: #0f2f63;
   color: #fff;
 }
 
+.btn-primary {
+  color: #fff !important;
+}
+
+.btn-danger {
+  color: #fff !important;
+}
+
+.btn-success {
+  color: #fff !important;
+}
+
 .btn-xlarge {
   font-size: 1.7em;
   background-color: #0f2f63;
@@ -117,6 +129,28 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
+
+// styling for article page
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-title a {
+  color: #4698d6 !important;
+}
+
+.article-title a:hover {
+  background-color: #fff;
+  color: #1f567f !important;
+}
+
+.article-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+// styling for article page
 
 body {
   margin: 0px;
