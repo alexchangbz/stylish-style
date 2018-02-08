@@ -5,7 +5,8 @@ class WelcomeController < ApplicationController
   end
   
   def shop
-    @products = Product.all
+    @products = Product.paginate(page: params[:page], per_page: 12)
+    @welcome = @products
   end
   
 end

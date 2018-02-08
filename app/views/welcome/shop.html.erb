@@ -1,7 +1,9 @@
 <h1>Stylish Style Shop</h1>
-
+<div align="center">
+  <%= will_paginate %>
+</div>
   <div class="row text-center text-lg-left">
-      <% @products.each do |product| %>
+      <% @welcome.each do |product| %>
       <div class="col-md-3">
           <a href="#" class="d-block mb-4 h-100">
             <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
@@ -12,5 +14,7 @@
       </div>
       <% end %>
   </div>
-
+<div align="center">
+  <%= will_paginate %>
+</div>
 
