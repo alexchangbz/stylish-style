@@ -1,4 +1,7 @@
 <h1 align="center">Listing Articles</h1>
+<% if logged_in? %>
+  <p><%= link_to "Create New Article", new_article_path %></p>
+<% end %>
 
 <div align="center">
   <%= will_paginate %>

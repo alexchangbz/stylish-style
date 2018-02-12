@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   
   def home
-    
+    redirect_to shop_path if logged_in?
   end
   
   def shop
