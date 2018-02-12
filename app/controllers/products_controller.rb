@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   
-before_action :require_user
+before_action :require_admin
   
   def index
     @products = Product.all
@@ -49,6 +49,13 @@ before_action :require_user
   
   def product_params
     params.require(:product).permit(:name, :price)
+  end
+  
+  def require_admin
+    if !current_user.admin?
+      flash[:danger] = "Only the administrator can perform this action"
+      redirect_to root_path
+    end
   end
   
 end
